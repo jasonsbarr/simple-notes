@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 const yargs = require('yargs');
-const notes = require('./notes');
+const notes = require('./lib/notes');
 
 // Create add command
 yargs.command({
