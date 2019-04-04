@@ -1,4 +1,5 @@
 const fs = require('fs');
+const log = require('./logger');
 
 const getNotes = function() {
     return "Here are your notes...";
@@ -8,12 +9,12 @@ const add = function(note) {
     const notes = load();
 
     if (exists(note.title)) {
-        return console.error('Note title already exists!');
+        return log.error('Note title already exists!');
     }
 
     notes.push(note);
     save(notes);
-    return console.log('Note added!');
+    return log.success('Note added!');
 };
 
 const remove = function(title) {
@@ -21,11 +22,11 @@ const remove = function(title) {
     const toRemove = notes.findIndex(note => title === note.title);
     
     if (toRemove < 0) {
-        return console.error(`Note title doesn't exist!`);
+        return log.error(`Note title doesn't exist!`);
     }
 
     save([...notes.slice(0, toRemove), ...notes.slice(toRemove + 1)]);
-    return console.log('Note removed!');
+    return log.success('Note removed!');
 };
 
 const load = function() {
