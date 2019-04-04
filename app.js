@@ -20,7 +20,7 @@ yargs.command({
         },
     },
     handler: function(argv) {
-        console.log(`Adding a new note to the list! Title: ${argv.title}; Body: ${argv.body}`);
+        notes.add({title: argv.title, body: argv.body});
     },
 });
 
