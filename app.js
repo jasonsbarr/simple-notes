@@ -27,14 +27,14 @@ yargs.command({
     command: `remove`,
     description: `Remove a note from the list`,
     builder: {
-        title: {
-            describe: `Title of note to remove`,
+        id: {
+            describe: `ID of note to remove`,
             demandOption: true,
-            type: `string`,
+            type: `number`,
         },
     },
     handler: argv => {
-        notes.remove(argv.title);
+        notes.remove(argv.id);
     },
 });
 
