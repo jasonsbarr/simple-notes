@@ -7,7 +7,7 @@ const getNotes = function() {
 const add = function(note) {
     const notes = load();
 
-    if (notes.find(item => item.title === note.title)) {
+    if (exists(note.title)) {
         return console.error('Note title already exists!');
     }
 
