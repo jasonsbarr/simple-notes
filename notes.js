@@ -31,6 +31,11 @@ const save = function(notes) {
     return fs.writeFileSync('notes.json', notesJSON);
 }
 
+const exists = (title) {
+    const notes = load();
+    return !!notes.find(note => title === note.title);
+}
+
 module.exports = {
     getNotes,
     add,
