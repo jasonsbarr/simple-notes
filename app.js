@@ -39,6 +39,14 @@ yargs.command({
 });
 
 yargs.command({
+    command: `list`,
+    description: `List all notes.`,
+    handler: () => {
+        notes.list();
+    },
+});
+
+yargs.command({
     command: `read`,
     description: `Read a note from the list.`,
     builder: {
@@ -50,14 +58,6 @@ yargs.command({
     },
     handler: (argv) => {
         notes.read(argv.id);
-    },
-});
-
-yargs.command({
-    command: `list`,
-    description: `List all notes.`,
-    handler: () => {
-        notes.list();
     },
 });
 
