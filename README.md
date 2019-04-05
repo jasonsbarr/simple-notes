@@ -16,6 +16,8 @@ git clone git@github.com:jasonsbarr/simple-notes.git
 
 You can also [download the ZIP file](https://github.com/jasonsbarr/simple-notes/archive/master.zip) from GitHub.
 
+Once you have the files downloaded (and unpacked if needed), run `npm link` to make the `notes` command available from `node_modules/.bin`.
+
 ## Usage
 
 (_This assumes you've put the app somewhere in your path._)
@@ -67,6 +69,11 @@ notes read --id=2
 ### Other options
 
 You can also use `--help` and `--version` to get more information about the app and its usage.
+
+### TODO:
+
+- Rearrange files to work as NPM package with `module.exports` in entry point file
+- Make it so that instead of, e.g. doing `notes read --id=1` the user can just use `notes read 1`
 
 ### License
 
