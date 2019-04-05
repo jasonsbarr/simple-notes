@@ -18,8 +18,10 @@ You can also [download the ZIP file](https://github.com/jasonsbarr/simple-notes/
 
 ## Usage
 
+(_This assumes you've put the app somewhere in your path._)
+
 ```bash
-node path/to/app.js command [arguments]
+notes command [arguments]
 ```
 
 ### Add
@@ -33,7 +35,7 @@ Note titles must be unique.
 Example:
 
 ```bash
-node app.js --title="Hello there" --body="This is a note"
+notes --title="Hello there" --body="This is a note"
 ```
 
 ### Remove
@@ -43,7 +45,7 @@ node app.js --title="Hello there" --body="This is a note"
 Example:
 
 ```bash
-node app.js remove --id=3
+notes remove --id=3
 ```
 
 ### List
@@ -51,7 +53,7 @@ node app.js remove --id=3
 `list` takes no arguments and simply prints a list of note IDs and titles to stdout.
 
 ```bash
-node app.js list
+notes list
 ```
 
 ### Read
@@ -59,7 +61,7 @@ node app.js list
 `read` takes the `--id=[number]` argument and prints the note title and content to stdout.
 
 ```bash
-node app.js read --id=2
+notes read --id=2
 ```
 
 ### Other options
