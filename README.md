@@ -74,6 +74,8 @@ You can also use `--help` and `--version` to get more information about the app 
 
 - Rearrange files to work as NPM package with `module.exports` in entry point file
 - Make it so that instead of, e.g. doing `notes read --id=1` the user can just use `notes read 1`
+- Allow editing note in text editor instead of requiring `--body` argument
+- Refactor for asynchronous file operations
 
 ### License
 
