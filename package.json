@@ -4,10 +4,14 @@
   "description": "Simple CLI note-taking app",
   "main": "app.js",
   "scripts": {
+    "notes": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jason Barr <jason@jasonsbarr.com>",
   "license": "MIT",
+  "bin": {
+    "notes": "app.js"
+  },
   "dependencies": {
     "chalk": "^2.4.2",
     "yargs": "^13.2.2"
